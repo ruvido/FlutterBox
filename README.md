@@ -1,5 +1,5 @@
 
-# Flutter Docker Sway Example
+# FlutterBox 📦
 
 This repository contains a minimal Flutter project configured for **Linux desktop development** (not tested for Web or Android) using Docker and Wayland/Sway forwarding. Follow the steps below to start the project from scratch.
 
@@ -34,8 +34,8 @@ The project is organized as follows:
    Open your terminal and run:
 
    ```bash
-   git clone https://github.com/ruvido/flutter-docker-sway.git
-   cd flutter-docker-sway
+   git clone https://github.com/ruvido/flutterbox.git
+   cd flutterbox
    ```
 
 2. **Build and Start the Docker Container**
