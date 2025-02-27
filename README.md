@@ -43,7 +43,8 @@ The project is organized as follows:
    Build the Docker image and start the container:
 
    ```bash
-   docker-compose up --build
+   docker-compose build
+   docker-compose up -d
    ```
 
    This builds the image and starts the container (attaching to its logs).
