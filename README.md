@@ -52,17 +52,7 @@ The project is organized as follows:
    docker-compose up -d
    ```
 
-3. **Access the Container’s Shell**
-
-   Open a new terminal window and attach to the running container:
-
-   ```bash
-   docker-compose exec flutter bash
-   ```
-
-   You should now be inside the container, with your project files available in the `/app` directory.
-
-4. **(Optional) Add Linux Desktop Support**
+3. **(Optional) Add Linux Desktop Support**
 
    If the `app` folder does not already include a `linux` directory, add Linux desktop support by running:
 
@@ -72,7 +62,15 @@ The project is organized as follows:
 
    This command generates the required `linux` folder and configuration files inside your Flutter project.
 
-5. **Run the Flutter App**
+4. **Run the Flutter App**
+
+   Open a new terminal window and attach to the running container:
+
+   ```bash
+   docker-compose exec flutter bash
+   ```
+
+   You should now be inside the container, with your project files available in the `/app` directory.
 
    Inside the container's shell, run:
 
@@ -82,7 +80,7 @@ The project is organized as follows:
 
    This command compiles and launches your Flutter Linux desktop app. With Wayland forwarding configured, the app will appear in your Sway session.
 
-6. **Development Workflow**
+5. **Development Workflow**
 
    - **Hot Reload:** Edit your files on the host (they are mounted into `/app` in the container), and use Flutter’s hot reload feature to see changes immediately (this is not automatic, you need to type `r` in the interactive shell - `docker-compose exec flutter bash`).
    - **Additional Commands:** Use the interactive shell  to run other Flutter commands as needed.
