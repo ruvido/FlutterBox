@@ -40,14 +40,17 @@ The project is organized as follows:
 
 2. **Build and Start the Docker Container**
 
-   Build the Docker image and start the container:
+   Build the Docker image (do it once):
 
    ```bash
    docker-compose build
-   docker-compose up -d
    ```
 
-   This builds the image and starts the container (attaching to its logs).
+   Start the container in the background (attaching to its logs):
+
+   ```bash
+   docker-compose up -d
+   ```
 
 3. **Access the Container’s Shell**
 
@@ -95,7 +98,7 @@ export XDG_RUNTIME_DIR=/run/user/$(id -u)
 
 ## Stopping the Container
 
-To stop the container, you can either press `Ctrl+C` in the terminal where `docker-compose up` is running or execute:
+To stop the container execute:
 
 ```bash
 docker-compose down
