@@ -1,5 +1,22 @@
-
 import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Docker Test',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyHomePage(title: 'Docker Flutter Home'),
+    );
+  }
+}
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -14,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-      _counter++; // Increase the counter by one
+      _counter++;
     });
   }
 
@@ -29,16 +46,11 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have pressed the button this many times:',
+              'YOU have pushed the button this many times:',
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: _incrementCounter,
-              child: const Text('Increment Counter'),
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
         ),

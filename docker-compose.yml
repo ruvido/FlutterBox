@@ -2,10 +2,13 @@ services:
   flutter:
     build: .
     volumes:
-      - ./app:/app                              # Mount the dedicated app folder
-      - ${XDG_RUNTIME_DIR}:${XDG_RUNTIME_DIR}:ro  # Mount host's Wayland socket directory
-    working_dir: /app
+      - ./app:/app
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+      - ${XDG_RUNTIME_DIR}:${XDG_RUNTIME_DIR}:rw
     environment:
-      - WAYLAND_DISPLAY=${WAYLAND_DISPLAY}  # Pass the Wayland display socket name
-      - XDG_RUNTIME_DIR=${XDG_RUNTIME_DIR}    # Pass the runtime directory
+      - DISPLAY=unix${DISPLAY}
+      - WAYLAND_DISPLAY
+      - XDG_RUNTIME_DIR
+    working_dir: /app
     tty: true
+    stdin_open: true
